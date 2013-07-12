@@ -20,26 +20,21 @@ public class Hakija {
 		
 		while( ! j1  ) {
 
-			System.out.println("Anna luettava tiedosto:");
-			String j5 = j2.nextLine();
+System.out.println(
+	"Anna luettava tiedosto:"
+); String j5 = j2.nextLine();
 
 			try {
 
-				File j4 = new File( j5 );
-				j3 = new Scanner( j4 );
+File j4 = new File( j5 );
+	j3 = new Scanner( j4 ); j1 
+		= true;
 
-				j1 = true;
-
-			} catch(Exception e) {
-				System.out.println("Ei onnistu! Yrita uudelleen.");
-			}
+			} catch(Exception e) {System.out.println("Ei onnistu! Yrita uudelleen.");}
 
 		}
 
-		while( j3.hasNextLine() ) {
-			String jeejee = j3.nextLine();
-			hupshei.add( jeejee );
-		}
+		while( j3.hasNextLine() ) {String jeejee = j3.nextLine();hupshei.add( jeejee );}
 
 		// TODO: lisaa tahan
 		// 1) kysy sana
