@@ -8,24 +8,18 @@ import java.io.*;
 
 public class Hakija {
 
-	/*** Tahan luetaan kayttajan syote nappikselta. */
 	private static Scanner nappis = new Scanner(System.in);
 
-    /*** Tahan juttuun luetaan tiedosto */
 	private static Scanner tiedos = null;
 
-	/*** Kerataan tahan kaikki rivit ***/
 	private static ArrayList<String> rivit = new ArrayList<String>();
 
-	/*** Tama osuus suoritetaan. **/
 	public static void main(String[] args) {
 
 		boolean onkoOK = false;
 		
-		// jatketaan tiedoston kysymista kunnes meilla on oikea tiedosto.
 		while( ! onkoOK  ) {
 
-			// luetaan tiedoston nimi ja valmistaudutaan lukemaan se tiedosto
 			System.out.println("Anna luettava tiedosto:");
 			String tiedostoNimi = nappis.nextLine();
 
@@ -42,7 +36,6 @@ public class Hakija {
 
 		}
 
-		// lue jokainen rivi ja tallenna ne rivit-listaan
 		while( tiedos.hasNextLine() ) {
 			String rivi = tiedos.nextLine();
 			rivit.add( rivi );
