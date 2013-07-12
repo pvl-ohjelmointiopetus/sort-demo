@@ -20,15 +20,26 @@ public class Hakija {
 	/*** Tama osuus suoritetaan. **/
 	public static void main(String[] args) {
 
-		// luetaan tiedoston nimi ja valmistaudutaan lukemaan se tiedosto
-		System.out.println("Anna luettava tiedosto:");
-		String tiedostoNimi = nappis.nextLine();
+		boolean onkoOK = false;
+		
+		// jatketaan tiedoston kysymista kunnes meilla on oikea tiedosto.
+		while( ! onkoOK  ) {
 
-		try {
-			File tiedosto = new File( tiedostoNimi );
-			tiedos = new Scanner( tiedosto );
-		} catch(Exception e) {
-			System.out.println("Ei onnistu!");
+			// luetaan tiedoston nimi ja valmistaudutaan lukemaan se tiedosto
+			System.out.println("Anna luettava tiedosto:");
+			String tiedostoNimi = nappis.nextLine();
+
+			try {
+
+				File tiedosto = new File( tiedostoNimi );
+				tiedos = new Scanner( tiedosto );
+
+				onkoOK = true;
+
+			} catch(Exception e) {
+				System.out.println("Ei onnistu! Yrita uudelleen.");
+			}
+
 		}
 
 		// lue jokainen rivi ja tallenna ne rivit-listaan
@@ -37,8 +48,8 @@ public class Hakija {
 			rivit.add( rivi );
 		}
 
-		// TODO: lisää tähän
-		// 1) kysy käyttäjältä sana
+		// TODO: lisaa tahan
+		// 1) kysy sana
 		// 2) tarkista, onko sana tiedostossa
 
 	}
