@@ -23,7 +23,7 @@ public class Hakija {
 			File tiedosto = new File( tiedostoNimi );
 			tiedos = new Scanner( tiedosto );
 		} catch(Exception e) {
-			System.out.println("Ei onnistu!")
+			System.out.println("Ei onnistu!");
 		}
 
 	}
