@@ -12,7 +12,7 @@ public class Hakija {
 
 	private static Scanner tiedos = null;
 
-	private static ArrayList<String> rivit = new ArrayList<String>();
+	private static ArrayList<String> hupshei = new ArrayList<String>();
 
 	public static void main(String[] args) {
 
@@ -37,8 +37,8 @@ public class Hakija {
 		}
 
 		while( tiedos.hasNextLine() ) {
-			String rivi = tiedos.nextLine();
-			rivit.add( rivi );
+			String jeejee = tiedos.nextLine();
+			hupshei.add( jeejee );
 		}
 
 		// TODO: lisaa tahan
