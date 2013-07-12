@@ -37,6 +37,10 @@ public class Hakija {
 			rivit.add( rivi );
 		}
 
+		// TODO: lisää tähän
+		// 1) kysy käyttäjältä sana
+		// 2) tarkista, onko sana tiedostossa
+
 	}
 
 }
