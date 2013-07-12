@@ -2,7 +2,9 @@
  *  Koodi lukee tiedoston ja kertoo, onko annettu sana siina tiedostossa.
  **/
 
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+
 
 public class Hakija {
 
@@ -11,6 +13,9 @@ public class Hakija {
 
     /*** Tahan juttuun luetaan tiedosto */
 	private static Scanner tiedos = null;
+
+	/*** Kerataan tahan kaikki rivit ***/
+	private static ArrayList<String> rivit = new ArrayList<String>();
 
 	/*** Tama osuus suoritetaan. **/
 	public static void main(String[] args) {
@@ -24,6 +29,12 @@ public class Hakija {
 			tiedos = new Scanner( tiedosto );
 		} catch(Exception e) {
 			System.out.println("Ei onnistu!");
+		}
+
+		// lue kaikki rivit
+		while( tiedos.hasNextLine() ) {
+			String rivi = tiedos.nextLine();
+			rivit.add( rivi );
 		}
 
 	}
