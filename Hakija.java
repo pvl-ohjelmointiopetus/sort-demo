@@ -8,27 +8,27 @@ import java.io.*;
 
 public class Hakija {
 
-	private static Scanner nappis = new Scanner(System.in);
+	private static Scanner j2 = new Scanner(System.in);
 
-	private static Scanner tiedos = null;
+	private static Scanner j3 = null;
 
 	private static ArrayList<String> hupshei = new ArrayList<String>();
 
 	public static void main(String[] args) {
 
-		boolean onkoOK = false;
+		boolean j1 = false;
 		
-		while( ! onkoOK  ) {
+		while( ! j1  ) {
 
 			System.out.println("Anna luettava tiedosto:");
-			String tiedostoNimi = nappis.nextLine();
+			String j5 = j2.nextLine();
 
 			try {
 
-				File tiedosto = new File( tiedostoNimi );
-				tiedos = new Scanner( tiedosto );
+				File j4 = new File( j5 );
+				j3 = new Scanner( j4 );
 
-				onkoOK = true;
+				j1 = true;
 
 			} catch(Exception e) {
 				System.out.println("Ei onnistu! Yrita uudelleen.");
@@ -36,8 +36,8 @@ public class Hakija {
 
 		}
 
-		while( tiedos.hasNextLine() ) {
-			String jeejee = tiedos.nextLine();
+		while( j3.hasNextLine() ) {
+			String jeejee = j3.nextLine();
 			hupshei.add( jeejee );
 		}
 
