@@ -31,7 +31,7 @@ public class Hakija {
 			System.out.println("Ei onnistu!");
 		}
 
-		// lue kaikki rivit
+		// lue jokainen rivi ja tallenna ne rivit-listaan
 		while( tiedos.hasNextLine() ) {
 			String rivi = tiedos.nextLine();
 			rivit.add( rivi );
